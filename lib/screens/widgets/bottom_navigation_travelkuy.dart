@@ -15,7 +15,7 @@ class _BottomNavigationTravelkuyState extends State<BottomNavigationTravelkuy> {
   Widget build(BuildContext context) {
     return Container(
       height: 64,
-      decoration: BoxDecoration(
+      decoration: BoxDecoration( 
           color: mFillColor,
           boxShadow: [
             BoxShadow(

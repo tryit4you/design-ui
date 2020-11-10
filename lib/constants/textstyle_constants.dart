@@ -27,7 +27,7 @@ var mPopularDestinationSubtitleStyle = GoogleFonts.inter(
 //style for Travlog Section
 var mTravlogTitleStyle = GoogleFonts.inter(
     fontSize: 14, fontWeight: FontWeight.w900, color: mFillColor);
-var mTralogContentStyle = GoogleFonts.inter(
+var mTravlogContentStyle = GoogleFonts.inter(
     fontSize: 10, fontWeight: FontWeight.w500, color: mTitleColor);
 var mTravlogPlaceStyle = GoogleFonts.inter(
     fontSize: 10, fontWeight: FontWeight.w500, color: mBlueColor);

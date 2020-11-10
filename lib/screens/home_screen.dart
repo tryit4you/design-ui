@@ -1,3 +1,5 @@
+
+
 import 'package:disign1/constants/color_constants.dart';
 import 'package:disign1/constants/textstyle_constants.dart';
 import 'package:disign1/models/carousel_model.dart';
@@ -8,6 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
+import '../constants/color_constants.dart';
+import '../constants/textstyle_constants.dart';
+
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -68,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemCount: carousel.length,
                       itemBuilder: (context, index) {
                         return Container(
-                            padding: EdgeInsets.symmetric(vertical: 15),
+                            padding: EdgeInsets.symmetric(vertical: 15),margin: EdgeInsets.only(right: 10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: DecorationImage(
@@ -343,7 +349,7 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(left: 16, right: 16),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10))),
-              height: 114,
+              height: 216,
               child: ListView.builder(
                 itemCount: travlogs.length,
                 scrollDirection: Axis.horizontal,
@@ -352,6 +358,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: EdgeInsets.only(right: 16),
                     width: 220,
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Stack(
                           children: [
@@ -374,10 +381,22 @@ class _HomeScreenState extends State<HomeScreen> {
                               right: 8,
                               top: 8,
                             ),
+                             Positioned(
+                              child: Text("Travlog "+ travlogs[index].name,style: mTravlogTitleStyle,),
+                              left: 8,
+                              bottom: 8,
+                            ),
+                            
                           ],
-                        )
+                        ),
+                        SizedBox(height: 10,),
+                        Text(travlogs[index].content,maxLines: 3,style: mTravlogContentStyle,),
+                        SizedBox(height: 10,),
+                        Text(travlogs[index].place,style: mTravlogPlaceStyle,)
                       ],
+                    
                     ),
+                    
                   );
                 },
               ),
