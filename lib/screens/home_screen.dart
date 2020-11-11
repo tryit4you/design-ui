@@ -55,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.center,
               margin: EdgeInsets.only(left: 16, right: 16),
               width: MediaQuery.of(context).size.width,
-              child: Column(
+              child: Column( 
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
